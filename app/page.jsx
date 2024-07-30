@@ -71,8 +71,12 @@ export default function Chat() {
             disabled={isLoading}
           />
         </div>
-        <button id="giveFeedback" onClick={handleButton(setPrompt, 'feedback')}>{(isLoading && onclick) ? "Loading..." : "Give feedback"}</button>
-        <button id="generateGrade" onClick={handleButton(setPrompt, 'grade')}>{isLoading && onclick ? "Loading..." : "Generate grade"}</button>
+        <button id="giveFeedback" onClick={handleButton(setPrompt, 'feedback')}>
+          {isLoading && onclick ? "Loading..." : "Give feedback"}
+        </button>
+        <button id="generateGrade" onClick={handleButton(setPrompt, 'grade')}>
+          {isLoading && onclick  ? "Loading..." : "Generate grade"}
+        </button>
       </form>
       
       {responseFromServer && (
